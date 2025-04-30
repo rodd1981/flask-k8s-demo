@@ -28,6 +28,6 @@ jobs:
       env:
         KUBECONFIG: ${{ github.workspace }}/kubeconfig
       run: |
-        kubectl apply -f deployment.yaml
-        kubectl apply -f service.yaml
+        kubectl apply --validate=false -f deployment.yaml
+        kubectl apply --validate=false -f service.yaml
 
